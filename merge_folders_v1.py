@@ -22,6 +22,10 @@ parser.add_argument("path_new")
 parser.add_argument("folder_name")
 args = parser.parse_args()
 
+path_old = args.path_old
+path_new = args.path_new
+folder_name = args.folder_name
+
 # создаем новую папку
 out_folder = join(Path(path_old).parent, folder_name)
 try:
