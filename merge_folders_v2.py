@@ -174,7 +174,7 @@ old_images_index = {get_hash(image):image for image in old_images_filenames}
 # копируем изображения, создаем хеш-индекс новой папки
 def copy_files(src, dst):
     file_formats = ['jpeg', 'bmp', 'png']
-    files_to_move = [file for file in os.listdir(src) if file.split('.')[-1] not in file_formats]
+    files_to_move = [file for file in os.listdir(src) if file.split('.')[-1] in file_formats]
     for file in files_to_move:
         shutil.copy2(join(src, file), dst)
 copy_files(path_old, out_folder)
